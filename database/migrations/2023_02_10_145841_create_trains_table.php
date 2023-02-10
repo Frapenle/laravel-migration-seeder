@@ -26,6 +26,14 @@ return new class extends Migration
             Cancellato - di tipo booleano
             */
             $table->id();
+            $table->string('company_name', 50);
+            $table->string('departure_station', 255);
+            $table->datetime('departure_time');
+            $table->datetime('arrival_time');
+            $table->string('train_code', 6);
+            $table->tinyInteger('num_of_carriages');
+            $table->boolean('is_in_time');
+            $table->boolean('is_cancelled');
             $table->timestamps();
         });
     }
